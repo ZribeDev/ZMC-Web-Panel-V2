@@ -8,5 +8,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 
 
 <?php
-echo str_replace("\n","<br>", shell_exec("docker logs "."mc"));
+$logRaw = shell_exec("docker logs "."mc");
+$logNewlines = str_replace("\n", "<br>", $logRaw);
+echo $logNewlines;
 ?>
