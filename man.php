@@ -8,8 +8,9 @@ if(!isset($_SESSION['UserData']['Username'])){
 
 
 <?php
-  function runcmd($dock, $cmd) {
-    shell_exec("docker exec ".$dock." mc-send-to-console ".$cmd);
+  function runcmd($dock, $cmdRaw) {
+    $cmdSanitized = escapeshellarg($cmdRaw);
+    shell_exec("docker exec ".$dock." mc-send-to-console ".$cmdSanitized);
     echo 'Command executed (200)<br>';
     echo 'Command: '.$cmd;
   }
