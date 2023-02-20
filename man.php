@@ -12,7 +12,7 @@ if(!isset($_SESSION['UserData']['Username'])){
     $cmdSanitized = escapeshellarg($cmdRaw);
     shell_exec("docker exec ".$dock." mc-send-to-console ".$cmdSanitized);
     echo 'Command executed (200)<br>';
-    echo 'Command: '.$cmd;
+    echo 'Command: '.$cmdSanitized;
   }
   function servstop($dock) {
     shell_exec("docker stop ".$dock);

@@ -21,3 +21,5 @@ ZMC Web Panel is a powerful panel designed for managing Minecraft servers. It wo
 - **Priority Support:** If you choose to donate to our project, you will get access to priority support, helping you get the most out of your Minecraft server.
 
 We hope you enjoy using ZMC Web Panel to manage your Minecraft server. If you have any questions or feedback, please don't hesitate to contact our support team on our [Discord server](https://discord.gg/bkne7WC85h). Thank you for choosing our panel!
+
+For more information, please refer to our [Documentation](https://zribedev.gitbook.io/zmcwebpanel/).
