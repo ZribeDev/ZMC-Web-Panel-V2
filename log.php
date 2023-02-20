@@ -9,6 +9,7 @@ if(!isset($_SESSION['UserData']['Username'])){
 
 <?php
 $logRaw = shell_exec("docker logs "."mc");
-$logNewlines = str_replace("\n", "<br>", $logRaw);
+$logSanitized = htmlspecialchars($logRaw);
+$logNewlines = str_replace("\n", "<br>", $logSanitized);
 echo $logNewlines;
 ?>
